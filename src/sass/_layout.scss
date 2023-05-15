@@ -1,0 +1,27 @@
+$color-main:#BEA67C;
+$color-light: #fff;
+$color-dark:#000;
+$color-nav: #a3a3a3;
+
+$font-main: 'Source Sans Pro', sans-serif;
+
+header {
+  height: 700px;
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  // height: 600px;
+padding-top: 25px;
+font-family: $font-main;
+}
+
+
+

@@ -1,0 +1,81 @@
+
+// here, we can edit text, font size, font weight, interlinia, text style,
+$font-main: 'Source Sans Pro', sans-serif;
+$color-nav: #a3a3a3;
+
+
+$color-main:#BEA67C;
+$color-light: #fff;
+$color-dark:#000;
+
+.logo {
+  .logo_title{
+    color: $color-light;
+    font-family: $font-main;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 30px;
+  }
+  .logo_subtitle{
+   color: $color-light;
+   letter-spacing: 3px;
+   font-size: 10px;
+   font-weight: 700;
+  }
+}
+
+.header_wrapper {
+  position: relative;
+  height: 700px;
+}
+
+.main-nav {
+  float: right;
+  margin-top: -60px;
+}
+
+  .main-nav a {
+    margin-left: 20px;
+font-weight: 600;
+color: $color-nav;
+font-size: 14px;
+  }
+  .header-page-description {
+    height: 700px;
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+.header_description_top {
+  position: relative;
+  color: $color-main;
+  font-weight: 700;
+  letter-spacing: 15px;
+  font-size: 65px;
+top: 200px;
+left: 50px;
+
+}
+.header_description_bottom{
+  position: relative;
+  color: $color-main;
+  font-weight: 700;
+  letter-spacing: 15px;
+  font-size: 65px;
+  top:200px;
+  left: 170px;
+  }
+// p{
+//   color: $color-light;
+//   top:200px;
+//   left: 100px;
+// }
+
+i{
+  color: red;
+}
+}
