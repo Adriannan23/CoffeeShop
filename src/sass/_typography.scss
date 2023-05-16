@@ -107,13 +107,22 @@ width: 900px;
 
 .header-bottom-elements{
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   p{
+    position: relative;
       color: $color-light;
 font-weight: 400;
 font-size: 25px;
 letter-spacing: 5px;
+
     }
-}
+    i{
+      position: absolute;
+      color: white;
+      font-size: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+
+}}
