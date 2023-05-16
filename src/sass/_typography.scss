@@ -48,6 +48,7 @@ header {
   position: absolute;
   top: 30px;
   right: 0;
+
   a {
     margin-left: 20px;
     font-weight: 600;
@@ -56,6 +57,7 @@ header {
 
 
   }
+
   a:hover {
     color: $color-main;
     text-decoration: none;
@@ -64,8 +66,8 @@ header {
 
 
 .header-page-description {
-height: 500px;
-width: 900px;
+  height: 500px;
+  width: 900px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -110,19 +112,21 @@ width: 900px;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+
   p{
     position: relative;
-      color: $color-light;
-font-weight: 400;
-font-size: 25px;
-letter-spacing: 5px;
+    color: $color-light;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 5px;
 
-    }
-    i{
-      position: absolute;
-      color: white;
-      font-size: 25px;
-      left: 50%;
-      transform: translateX(-50%);
+  }
 
-}}
+  i{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }}
