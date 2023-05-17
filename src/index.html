@@ -46,25 +46,77 @@
         <div id="product-list" class="product-list container"></div>
     </section>
     <section id="contact">
-        <div class="contact-page">
-      </div>
+        <div id="contact-page" class="contact-page container"></div>
     </section>
 </div>
 
 <script id="template-home-page" type="text/x-handlebars-template">
-
 </script>
 
-<script id="template-products" type="text/x-handlebars-template">
-    <div class="product__name">
+<section class="section-products">
+    <div class='container'>
+
+        <div class="header-wrapper">
+        <h2 class='products-header'>PRODUCTS</h2>
+        </div>
+
+        <div class="products-wrapper">
+            <div class='products-wrapper-description'>
+                <h3>01. LA LAGARTIJA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur consequatur eum fuga atque, quae repellat quas a expedita esse.</p>
+                <p>ROASTING: <span>5/10</span></p>
+                <p>INTENSITY: <span>6/10</span></p>
+            </div>
+            <div class="img-wrapper-right">
+                <img src="/images/coffee-1.png" alt="la lagartija">
+            </div>
+        </div>
+
+        <div class="products-wrapper">
+            <div class="img-wrapper-left">
+                <img src="/images/coffee-2.png" alt="la lagartija">
+            </div>
+            <div class='products-wrapper-description'>
+                <h3>02. LA LAGARTIJA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur consequatur eum fuga atque, quae repellat quas a expedita esse.</p>
+                <p>ROASTING: <span>5/10</span></p>
+                <p>INTENSITY: <span>6/10</span></p>
+            </div>
+
+        </div>
+
+        <div class="products-wrapper-right">
+            <div class='products-wrapper-description'>
+                <h3>03. LA LAGARTIJA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur consequatur eum fuga atque, quae repellat quas a expedita esse.</p>
+                <p>ROASTING: <span>5/10</span></p>
+                <p>INTENSITY: <span>6/10</span></p>
+            </div>
+            <div class="img-wrapper">
+                <img src="/images/coffee-3.png" alt="la lagartija">
+            </div>
+        </div>
 
     </div>
-</script>
+
+    <!-- <div id="test">
+
+    </div>
+
+<script id="products-template" type="text/x-handlebars-template">
+    <li class="products">
+      <h3>{{id}}</h3>
+      <p>{{description}}</p>
+      <p>{{roasting}}</p>
+      <p>{{intensity}}</p>
+      <img src="images/{{shortCode}}.png">
+    </li>
+</script> -->
+</section>
 
 <script id="template-contact-form" type="text/x-handlebars-template">
-
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script type="module" src="js/script.js"></script>
 </body>
 </html>

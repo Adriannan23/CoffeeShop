@@ -13,6 +13,7 @@ export const select = {
   }
 };
 
-export const templates = {
-  allProducts: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
-};
+// export const templates = {
+//   allProducts: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
+// };
+
