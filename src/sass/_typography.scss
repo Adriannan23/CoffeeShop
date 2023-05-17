@@ -179,25 +179,55 @@ header {
   flex-direction: row;
   margin-bottom: 40px;
 
-.products-wrapper-description{
+.products-wrapper-description-right, .img-wrapper-right {
   flex-basis: 50%;
-  }}
+}
+.products-wrapper-description-left, .img-wrapper-left {
+  flex-basis: 50%;
 
-  .img-wrapper{
-    flex-basis: 50%;
+}
+h3 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.products-paragraph-desc{
+  font-size: 12px;
+}
+.roasting-and-intensity{
+  font-weight: 700;
+
+}
+span{
+  color:$color-main;
+}
+}
+
+
+  .img-wrapper-right{
+
+    height: auto;
+
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    .img-wrapper-right{
-      width: 70%;
-      height: auto;
+img{
+  height: 350px;
+  width: 450px;
 
+}
+  }
 
-    }
+  .img-wrapper-left{
 
-    .img-wrapper-left{
-      width: 70%;
-      height: auto;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    img{
+  height: 350px;
+width: 450px;
 
-    }
+  }
+
   }
