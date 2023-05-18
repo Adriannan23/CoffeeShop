@@ -39,21 +39,21 @@
 //     'image': 'coffee-3'
 //   });
 
-  // console.log(typeof generatedHtmlForProduct);
+// console.log(typeof generatedHtmlForProduct);
 
-  // const generated2 = compiledProductsTemplate(data.products[1]);
+// const generated2 = compiledProductsTemplate(data.products[1]);
 
-  // console.log('generatedHtmlForProduct:', generated2);
+// console.log('generatedHtmlForProduct:', generated2);
 
-  // const element = document.getElementById('test');
+// const element = document.getElementById('test');
 
-  // console.log(element);
+// console.log(element);
 
-  // function elo(htmlString) {
-  //   let div = document.createElement('div');
-  //   div.innerHTML = htmlString.trim();
-  //   console.log('zwroce takie cos', div.firstChild);
-  //   return div.firstChild;
-  // }
-  // element.appendChild(elo(generatedHtmlForProduct));
+// function elo(htmlString) {
+//   let div = document.createElement('div');
+//   div.innerHTML = htmlString.trim();
+//   console.log('zwroce takie cos', div.firstChild);
+//   return div.firstChild;
+// }
+// element.appendChild(elo(generatedHtmlForProduct));
 // });
