@@ -3,7 +3,7 @@
 export const select = {
   templateOf: {
     homePage: '#template-home-page',
-    product: '#template-products',
+    product: '#products-template',
     contactPage: '#template-contact-form'
   },
   containerOf: {
@@ -21,7 +21,7 @@ export const settings = {
 
 };
 
-// export const templates = {
-//   allProducts: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
-// };
+export const templates = {
+  allProducts: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
+};
 

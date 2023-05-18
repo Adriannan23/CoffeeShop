@@ -1,7 +1,7 @@
 // import { templates } from "./settings.js";
 // // import { select } from '../settings.js';
 
-import { settings } from './settings.js';
+import { settings, } from './settings.js';
 
 // const app = {
 // }
@@ -74,9 +74,9 @@ function connectWithDataBase() {
         const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
         console.log('generatedHtmlForProduct', generatedHtmlForProduct);
 
-        const element = document.getElementById('test');
+        const element = document.getElementById('container');
 
-        element.appendChild(elo(generatedHtmlForProduct));
+        // element.appendChild(elo(generatedHtmlForProduct));
 
       }
     });

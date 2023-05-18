@@ -54,7 +54,7 @@
 </script>
 
 <section class="section-products">
-    <div class="container">
+    <div id="container">
 
         <div class="header-wrapper">
         <h2 class="products-header">PRODUCTS</h2>
@@ -103,18 +103,26 @@
 
     </div>
 
-    <div id="test">
+    <!-- <div id="test">
 
-    </div>
+    </div> -->
 
 <script id="products-template" type="text/x-handlebars-template">
-    <li class="products">
-      <h3>{{id}}</h3>
-      <p>{{description}}</p>
-      <p>{{roasting}}</p>
-      <p>{{intensity}}</p>
-      <img src="images/{{shortCode}}.png">
-    </li>
+           <div class="products-wrapper">
+                <div class="img-wrapper-left">
+                    <img src="{{image}}" alt="la lagartija">
+                </div>
+                <div class="products-wrapper-description-left">
+                    <div class="test">
+                        <h3>{{id}}</h3>
+                        <div class="paragraph-desc-wrapper-left">
+                            <p class="products-paragraph-desc">{{ description}}</p>
+                        </div>
+                        <p class="roasting">ROASTING: <span>{{ roasting }}</span></p>
+                        <p class="intensity">INTENSITY: <span>{{ intensity }}</span></p>
+                    </div>
+                </div>
+            </div>
 </script>
 </section>
 
