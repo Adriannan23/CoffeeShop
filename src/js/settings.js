@@ -13,6 +13,14 @@ export const select = {
   }
 };
 
+export const settings = {
+  db: {
+    url: '//localhost:3131',
+    products: 'products',
+  }
+
+};
+
 // export const templates = {
 //   allProducts: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
 // };

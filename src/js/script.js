@@ -1,83 +1,86 @@
 // import { templates } from "./settings.js";
 // // import { select } from '../settings.js';
 
+import { settings } from './settings.js';
+
 // const app = {
 // }
 // app.init();
 
+// import { settings } from '../settings.js';
+// const data = {
+//   'products': [
+//     {
+//       'id': 1,
+//       'description': 'Opis produktu 1',
+//       'roasting': 'Stopień palenia 1',
+//       'intensity': 'Intensywność 1',
+//       'image': 'coffee-3'
+//     },
+//     {
+//       'id': 2,
+//       'description': 'Opis produktu 2',
+//       'roasting': 'Stopień palenia 2',
+//       'intensity': 'Intensywność 2',
+//       'image': 'coffee-3'
+//     },
+//   ]
+// };
 
-const data = {
-  'products': [
-    {
-      'id': 1,
-      'description': 'Opis produktu 1',
-      'roasting': 'Stopień palenia 1',
-      'intensity': 'Intensywność 1',
-      'image': 'coffee-3'
-    },
-    {
-      'id': 2,
-      'description': 'Opis produktu 2',
-      'roasting': 'Stopień palenia 2',
-      'intensity': 'Intensywność 2',
-      'image': 'coffee-3'
-    },
-  ]
-};
+// tutaj mam jeszcze pusty template
+// document.addEventListener('DOMContentLoaded', function () {
+//   // const productsTemplate = document.getElementById('products-template').innerHTML;
+//   // console.log('productsTemplate:', productsTemplate);
 
-document.addEventListener('DOMContentLoaded', function () {
-  const productsTemplate = document.getElementById('products-template').innerHTML;
-  console.log('productsTemplate:', productsTemplate);
+//   // const compiledProductsTemplate = Handlebars.compile(productsTemplate);
 
-  const compiledProductsTemplate = Handlebars.compile(productsTemplate);
+//   // const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
 
-  const generatedHtmlForProduct = compiledProductsTemplate({
-    'id': 1,
-    'description': 'Opis produktu 1',
-    'roasting': 'Stopień palenia 1',
-    'intensity': 'Intensywność 1',
-    'image': 'coffee-3'
-  });
+//   // const generated2 = compiledProductsTemplate(parsedResponse[1]);
 
-  const generated2 = compiledProductsTemplate(data.products[1]);
+//   // console.log('generated2:', generated2);
 
-  console.log('generatedHtmlForProduct:', generated2);
+//   const element = document.getElementById('test');
 
-  const element = document.getElementById('test');
+//   console.log(element);
 
-  console.log(element);
 
-  function elo(htmlString) {
-    let div = document.createElement('div');
-    div.innerHTML = htmlString.trim();
-    console.log('zwroce takie cos', div.firstChild);
-    return div.firstChild;
-  }
-  element.appendChild(elo(generatedHtmlForProduct));
+//   //
+// }
+// );
 
+function elo(htmlString) {
+  let div = document.createElement('div');
+  div.innerHTML = htmlString.trim();
+  return div.firstChild;
 }
-);
 
 function connectWithDataBase() {
 
-  // let tabWithAllProducts = [];
-
-  const url = 'http://localhost:3131/products';
-
-
+  const url = settings.db.url + '/' + settings.db.products;
 
   fetch(url)
     .then(function (rawResponse) {
       return rawResponse.json();
     })
     .then(function (parsedResponse) {
-      return parsedResponse;
+
+      for (let i = 0; i < parsedResponse.length; i++) {
+
+        const productsTemplate = document.getElementById('products-template').innerHTML;
+
+        const compiledProductsTemplate = Handlebars.compile(productsTemplate);
+
+        const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
+        console.log('generatedHtmlForProduct', generatedHtmlForProduct);
+
+        const element = document.getElementById('test');
+
+        element.appendChild(elo(generatedHtmlForProduct));
+
+      }
     });
-
-
-  // for (let i = 0; i <= tabWithProducts.length; i++) {
-  //   console.log(i);
-  // }
-
 }
+
 connectWithDataBase();
+
