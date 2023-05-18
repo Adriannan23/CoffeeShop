@@ -72,11 +72,11 @@ function connectWithDataBase() {
         const compiledProductsTemplate = Handlebars.compile(productsTemplate);
 
         const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
-        console.log('generatedHtmlForProduct', generatedHtmlForProduct);
 
-        const element = document.getElementById('container');
+        const element = document.getElementsByClassName('container')[0];
+        console.log('elements', element);
 
-        // element.appendChild(elo(generatedHtmlForProduct));
+        element.appendChild(elo(generatedHtmlForProduct));
 
       }
     });
