@@ -64,20 +64,37 @@ function connectWithDataBase() {
       return rawResponse.json();
     })
     .then(function (parsedResponse) {
+      console.log(parsedResponse);
 
       for (let i = 0; i < parsedResponse.length; i++) {
 
-        const productsTemplate = document.getElementById('products-template').innerHTML;
+        if (i % 2 === 0) {
+          const productsTemplate = document.getElementById('products-template-right').innerHTML;
 
-        const compiledProductsTemplate = Handlebars.compile(productsTemplate);
+          const compiledProductsTemplate = Handlebars.compile(productsTemplate);
 
-        const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
+          const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
 
-        const element = document.getElementsByClassName('container')[0];
-        console.log('elements', element);
+          const element = document.getElementsByClassName('container')[0];
+          console.log('elements', element);
 
-        element.appendChild(elo(generatedHtmlForProduct));
+          element.appendChild(elo(generatedHtmlForProduct));
+          console.log('generatedHtmlForProduct', generatedHtmlForProduct);
+        }
 
+        else {
+
+          const productsTemplate = document.getElementById('products-template-left').innerHTML;
+
+          const compiledProductsTemplate = Handlebars.compile(productsTemplate);
+
+          const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
+
+          const element = document.getElementsByClassName('container')[0];
+          console.log('elements', element);
+
+          element.appendChild(elo(generatedHtmlForProduct));
+        }
       }
     });
 }

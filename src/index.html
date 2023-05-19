@@ -103,19 +103,36 @@
 
     </div>
 
-    <!-- <div id="test">
 
-    </div> -->
 
-<script id="products-template" type="text/x-handlebars-template">
+<script id="products-template-right" type="text/x-handlebars-template">
+    <div class="products-wrapper">
+        <div class="products-wrapper-description-right">
+            <div class="wrapper-elements-right">
+            <h3>{{id}}</h3>
+            <div class="paragraph-desc-wrapper">
+            <p class="products-paragraph-desc">{{description}}</p>
+        </div>
+            <p class="roasting">ROASTING: <span>{{roasting}}</span></p>
+            <p class="intensity">INTENSITY: <span>{{intensity}}</span></p>
+        </div>
+        </div>
+        <div class="img-wrapper-right">
+            <img src="{{image}}" alt="img">
+        </div>
+    </div>
+</script>
+</section>
+
+<script id="products-template-left" type="text/x-handlebars-template">
     <div class="products-wrapper">
         <div class="img-wrapper-left">
-            <img src="{{image}}" alt="la lagartija">
+            <img src="{{image}}" alt="img">
         </div>
         <div class="products-wrapper-description-left">
-            <div class="test">
+            <div class="wrapper-elements-left">
                 <h3>{{id}}</h3>
-                <div class="paragraph-desc-wrapper-left">
+                <div class="paragraph-desc-wrapper">
                     <p class="products-paragraph-desc">{{description}}</p>
                 </div>
                 <p class="roasting">ROASTING: <span>{{roasting}}</span></p>
@@ -124,7 +141,6 @@
         </div>
     </div>
 </script>
-</section>
 
 <script id="template-contact-form" type="text/x-handlebars-template">
 </script>

@@ -174,8 +174,6 @@ header {
   top: 70px;
 }
 
-
-
 .products-wrapper{
   display: flex;
   flex-direction: row;
@@ -183,11 +181,28 @@ header {
 
   .products-wrapper-description-right, .img-wrapper-right {
     flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
 
-
-
-
-
+    .wrapper-elements-right{
+      height: inherit;
+      width: 400px;
+      position: absolute;
+      left: 30px;
+      top: 50px;
+    }
+    .wrapper-elements-right::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      transform: translateX(-50%);
+      background: $color-main;
+      left: 45px;
+      bottom: -10px;
+    }
   }
 
   .products-wrapper-description-left, .img-wrapper-left {
@@ -197,16 +212,15 @@ header {
     flex-wrap: wrap;
     position: relative;
 
-
-    .test{
+    .wrapper-elements-left{
       height: inherit;
       width: 400px;
       position: absolute;
-      left:70px;
-      top:50px;
-          }
+      left: 70px;
+      top: 50px;
+    }
 
-    .test::after {
+    .wrapper-elements-left::after {
       content: "";
       position: absolute;
       width: 80px;
@@ -215,16 +229,8 @@ header {
       background: $color-main;
       left: 45px;
       bottom: -10px;
-          }
+    }
 
-  // .products-wrapper-description-left::after{
-  //   position: absolute;
-  //   left: 50%;
-  //   width: 150px;
-  //   height: 5px;
-  //   transform: translateX(-50%);
-  //   background: $color-main;
-  // }
   }
 
   h3 {
@@ -234,11 +240,12 @@ header {
     position: relative;
   }
 
-  .paragraph-desc-wrapper-left{
+
+  .paragraph-desc-wrapper{
     position: absolute;
-height: 100px;
-width: 300px;
-left: 100px;
+    height: 100px;
+    width: 300px;
+    left: 100px;
   }
 
   .products-paragraph-desc{
@@ -250,7 +257,7 @@ left: 100px;
     font-weight: 700;
     font-size: 18px;
     position: absolute;
-    top:160px;
+    top: 160px;
     letter-spacing: 1px;
   }
 
@@ -258,7 +265,7 @@ left: 100px;
     font-weight: 700;
     font-size: 18px;
     position: absolute;
-    top:185px;
+    top: 185px;
     letter-spacing: 1px;
   }
 
@@ -266,7 +273,6 @@ left: 100px;
     color: $color-main;
   }
 }
-
 
 .img-wrapper-right{
 
@@ -290,12 +296,8 @@ left: 100px;
   justify-content: left;
   align-items: center;
 
-
   img{
     height: 360px;
     width: 460px;
-
   }
-
 }
-

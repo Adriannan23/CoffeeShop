@@ -22,11 +22,11 @@
       "image":"images/coffee-3.png"
     },
     {
-      "id":"02. EL TIGRE",
+      "id":"04. EL LOKOPOKO",
       "description":"Really dark coffee, only for the real gourmets. It has bitter flavour of grapefruits and is mixed with a little bit of peanuts with caramel.",
-      "roasting":"8/10",
-      "intensity":"9/10",
-      "image":"images/coffee-2.png"
+      "roasting":"6/10",
+      "intensity":"2/10",
+      "image":"images/background.png"
     }
   ]
 }
