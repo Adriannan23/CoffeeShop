@@ -50,79 +50,35 @@
     </section>
 </div>
 
-<script id="template-home-page" type="text/x-handlebars-template">
-</script>
+<section id="home-page">
+
+
+</section>
 
 <section class="section-products">
     <div class="container">
-
         <div class="header-wrapper">
-        <h2 class="products-header">PRODUCTS</h2>
+            <h2 class="products-header">PRODUCTS</h2>
         </div>
-
-        <!-- <div class="products-wrapper">
-            <div class="products-wrapper-description-right">
-                <h3>01. LA LAGARTIJA</h3>
-                <p class="products-paragraph-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur consequatur eum fuga atque, quae repellat quas a expedita esse.</p>
-                <p class="roasting-and-intensity">ROASTING: <span>5/10</span></p>
-                <p class="roasting-and-intensity">INTENSITY: <span>6/10</span></p>
-            </div>
-            <div class="img-wrapper-right">
-                <img src="/images/coffee-1.png" alt="la lagartija">
-            </div>
-        </div> -->
-
-        <!-- <div class="products-wrapper">
-            <div class="img-wrapper-left">
-                <img src="/images/coffee-2.png" alt="la lagartija">
-            </div>
-            <div class="products-wrapper-description-left">
-                <div class="test">
-                    <h3>02. LA LAGARTIJA</h3>
-                    <div class="paragraph-desc-wrapper-left">
-                        <p class="products-paragraph-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur consequatur eum fuga atque, quae repellat quas a expedita esse.</p>
+        </div>
+        <script id="products-template-right" type="text/x-handlebars-template">
+            <div class="products-wrapper">
+                <div class="products-wrapper-description-right">
+                    <div class="wrapper-elements-right">
+                        <h3>{{id}}</h3>
+                        <div class="paragraph-desc-wrapper">
+                        <p class="products-paragraph-desc">{{description}}</p>
                     </div>
-                    <p class="roasting">ROASTING: <span>5/10</span></p>
-                    <p class="intensity">INTENSITY: <span>6/10</span></p>
+                    <p class="roasting">ROASTING: <span>{{roasting}}</span></p>
+                    <p class="intensity">INTENSITY: <span>{{intensity}}</span></p>
                 </div>
             </div>
-
-        </div> -->
-
-        <!-- <div class="products-wrapper">
-            <div class="products-wrapper-description-right">
-                <h3>03. LA LAGARTIJA</h3>
-                <p class="products-paragraph-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur consequatur eum fuga atque, quae repellat quas a expedita esse.</p>
-                <p class="roasting-and-intensity">ROASTING: <span>5/10</span></p>
-                <p class="roasting-and-intensity">INTENSITY: <span>6/10</span></p>
-            </div>
             <div class="img-wrapper-right">
-                <img src="/images/coffee-3.png" alt="la lagartija">
+                <img src="{{image}}" alt="img">
             </div>
-        </div> -->
-
     </div>
 
-
-
-<script id="products-template-right" type="text/x-handlebars-template">
-    <div class="products-wrapper">
-        <div class="products-wrapper-description-right">
-            <div class="wrapper-elements-right">
-            <h3>{{id}}</h3>
-            <div class="paragraph-desc-wrapper">
-            <p class="products-paragraph-desc">{{description}}</p>
-        </div>
-            <p class="roasting">ROASTING: <span>{{roasting}}</span></p>
-            <p class="intensity">INTENSITY: <span>{{intensity}}</span></p>
-        </div>
-        </div>
-        <div class="img-wrapper-right">
-            <img src="{{image}}" alt="img">
-        </div>
-    </div>
 </script>
-</section>
 
 <script id="products-template-left" type="text/x-handlebars-template">
     <div class="products-wrapper">
@@ -141,9 +97,30 @@
         </div>
     </div>
 </script>
+</section>
 
-<script id="template-contact-form" type="text/x-handlebars-template">
-</script>
+<section class="about-us">
+<div class="container-section-about-us">
+    <div class="header-wrapper">
+            <div class="products-header"><h2>ABOUT US</h2></div>
+    </div>
+    <div class="about-us-paragraphs-wrapper">
+        <p>Who are we? Just a bunch of friends with a love for good coffee and desire to create something new, something original.</p>
+        <p>Our cofee reflect us - youn, wild and free.<br>
+        We are on the journey of new tastes...</p>
+    </div>
+    <div class ="about-us-paragraph-join-us">
+            <p>Join us!</p>
+    </div>
+<div>
+</section>
+
+<section class="template-contact-form">
+
+</section>
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script type="module" src="js/script.js"></script>
 </body>
