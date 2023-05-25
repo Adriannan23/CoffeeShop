@@ -11,6 +11,11 @@ export const select = {
     home: '#home',
     products: '#products',
     contact: '#contact',
+    pages: '#pages',
+  },
+
+  nav: {
+    links: '.main-nav a',
   }
 };
 
@@ -20,6 +25,15 @@ export const settings = {
     products: 'products',
   }
 
+};
+
+export const classNames = {
+  nav: {
+    active: 'active',
+  },
+  pages: {
+    active: 'active',
+  }
 };
 
 // export const templates = {
