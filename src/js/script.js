@@ -6,7 +6,7 @@ class App {
   constructor() {
   }
 
-  elo(htmlString) {
+  createElem(htmlString) {
     let div = document.createElement('div');
     div.innerHTML = htmlString.trim();
     return div.firstChild;
@@ -25,13 +25,13 @@ class App {
             const compiledProductsTemplate = Handlebars.compile(productsTemplate);
             const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
             const element = document.getElementsByClassName('container')[0];
-            element.appendChild(this.elo(generatedHtmlForProduct));
+            element.appendChild(this.createElem(generatedHtmlForProduct));
           } else {
             const productsTemplate = document.getElementById('products-template-left').innerHTML;
             const compiledProductsTemplate = Handlebars.compile(productsTemplate);
             const generatedHtmlForProduct = compiledProductsTemplate(parsedResponse[i]);
             const element = document.getElementsByClassName('container')[0];
-            element.appendChild(this.elo(generatedHtmlForProduct));
+            element.appendChild(this.createElem(generatedHtmlForProduct));
           }
         }
       });
