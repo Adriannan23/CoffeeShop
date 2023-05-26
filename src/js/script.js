@@ -34,65 +34,49 @@ const app = {
       });
   },
 
-  initPages: function () {
-    const pages = document.querySelector(select.containerOf.pages).children;
-    console.log('pages', pages);
-    const navLinks = document.querySelectorAll(select.nav.links);
-    console.log('navLinks', navLinks);
-    const idFromHash = window.location.hash.replace('#', '');
-    console.log('idFromHash', idFromHash);
-    let pageMatchingHash = pages[0].id;
-    console.log('pageMatchingHash', pageMatchingHash);
+  hideTabs: function () {
 
-    for (let page of pages) {
-      if (page.id == idFromHash) {
-        pageMatchingHash = page.id;
-        break;
-      }
+
+    const sectionProducts = document.querySelector('.section-products');
+
+    const sectionAboutUs = document.querySelector('.about-us');
+
+    const sectionContactUs = document.querySelector('.contact-form');
+
+    this.navLinks = document.querySelectorAll(select.nav.links);
+
+    for (let link of this.navLinks) {
+      link.addEventListener('click', function (event) {
+        const clickedElement = this;
+        event.preventDefault();
+
+        if (clickedElement.getAttribute('href') == '#home') {
+
+          sectionContactUs.classList.add('inactive');
+          sectionProducts.classList.remove('inactive');
+          sectionAboutUs.classList.remove('inactive');
+        }
+
+        if (clickedElement.getAttribute('href') == '#contact') {
+          sectionContactUs.classList.remove('inactive');
+          sectionProducts.classList.add('inactive');
+          sectionAboutUs.classList.add('inactive');
+        }
+        if (clickedElement.getAttribute('href') == '#products') {
+          sectionContactUs.classList.add('inactive');
+          sectionProducts.classList.remove('inactive');
+          sectionAboutUs.classList.add('inactive');
+        }
+      });
     }
-    // activatePage(pageMatchingHash);
-
-    //   for (let link of navLinks) {
-    //     link.addEventListener('click', function (event) {
-    //       const clickedElement = this;
-    //       event.preventDefault();
-
-    //       // get page id from href attribute
-    //       const id = clickedElement.getAttribute('href').replace('#', '');
-
-    //       // run thisApp.activatePage with that id
-    //       activatePage(id);
-
-    //       // change URL hash
-    //       window.location.hash = '#/' + id;
-    //     });
-    //   }
-    // },
-
-
-
-    // activatePage: function (pageId) {
-
-
-    //   /* add class "active" to matching pages, remove from non-matching */
-    //   for (let page of pages) {
-    //     page.classList.toggle(classNames.pages.active, page.id == pageId);
-    //   }
-    //   // if (page.id == pageId) {
-    //   //   page.classList.add(classNames.pages.active);
-    //   // }
-    //   // else {
-    //   //   page.classList.remove(classNames.pages.active);
-    //   // }
-    //   /* add class "active" to matching links, remove from non-matching */
-
-    //   for (let link of navLinks) {
-    //     link.classList.toggle(classNames.nav.active,
-    //       link.getAttribute('href') == '#' + pageId
-    //     );
-    //   }
   },
+
+
+
 };
-app.initPages();
+// app.initPages();
+// app.initHome();
+
 app.connectWithDataBase();
+app.hideTabs();
 

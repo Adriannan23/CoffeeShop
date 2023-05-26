@@ -36,8 +36,3 @@ export const classNames = {
   }
 };
 
-// export const templates = {
-//   allProducts_left: Handlebars.compile(document.querySelector(select.templateOf.product_left).innerHTML),
-//   allProducts_right: Handlebars.compile(document.querySelector(select.templateOf.product_right).innerHTML),
-// };
-
