@@ -36,12 +36,15 @@ const app = {
 
   hideTabs: function () {
 
-
     const sectionProducts = document.querySelector('.section-products');
 
     const sectionAboutUs = document.querySelector('.about-us');
 
     const sectionContactUs = document.querySelector('.contact-form');
+
+    sectionContactUs.classList.add('inactive');
+    sectionProducts.classList.remove('inactive');
+    sectionAboutUs.classList.remove('inactive');
 
     this.navLinks = document.querySelectorAll(select.nav.links);
 
@@ -50,11 +53,15 @@ const app = {
         const clickedElement = this;
         event.preventDefault();
 
+        const id = clickedElement.getAttribute('href').replace('#', '');
+        window.location.hash = id;
+
         if (clickedElement.getAttribute('href') == '#home') {
 
           sectionContactUs.classList.add('inactive');
           sectionProducts.classList.remove('inactive');
           sectionAboutUs.classList.remove('inactive');
+
         }
 
         if (clickedElement.getAttribute('href') == '#contact') {
@@ -70,12 +77,7 @@ const app = {
       });
     }
   },
-
-
-
 };
-// app.initPages();
-// app.initHome();
 
 app.connectWithDataBase();
 app.hideTabs();
