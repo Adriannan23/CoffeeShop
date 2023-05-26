@@ -312,6 +312,7 @@ header {
     font-family: $font-main;
     font-weight: 700;
   }
+
 }
 
 .container-section-about-us {
@@ -366,21 +367,45 @@ header {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 40px;
+  font-family: $font-main;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .contact-form h2 {
-  font-size: 24px;
   margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 45px;
+  font-family: $font-main;
+  font-weight: 700;
+  color: $color-main;
+  position: relative;
+}
+
+
+.contact-form h2::after {
+  position: absolute;
+  content: "";
+  bottom: 300px;
+  left: 50%;
+  width: 500px;
+  height: 4px;
+  transform: translateX(-50%);
+  background: $color-main;
+  bottom: -15px;
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
   align-items: center;
+margin-top: 45px;
 }
 
 .contact-form label {
   margin-bottom: 10px;
+
 }
 
 .contact-form input,
@@ -388,24 +413,32 @@ header {
   width: 300px;
   padding: 5px;
   margin-bottom: 15px;
+  border: solid;
 }
 
 .contact-form button {
-  padding: 10px 20px;
+  margin-top:15px;
+  padding: 12px 30px;
   background-color: $color-main;
   color: white;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .contact-form button:hover {
   background-color: #a3875e;
 }
 
+#message{
+  height: 90px;
+}
 // SECTION FOOTER
 
 .section-footer{
   text-align: center;
   font-family: $font-main;
-  font-size: 18px;
+  font-size: 12px;
+  padding:15px;
 }

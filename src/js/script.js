@@ -57,11 +57,9 @@ const app = {
         window.location.hash = id;
 
         if (clickedElement.getAttribute('href') == '#home') {
-
           sectionContactUs.classList.add('inactive');
           sectionProducts.classList.remove('inactive');
           sectionAboutUs.classList.remove('inactive');
-
         }
 
         if (clickedElement.getAttribute('href') == '#contact') {
@@ -69,6 +67,7 @@ const app = {
           sectionProducts.classList.add('inactive');
           sectionAboutUs.classList.add('inactive');
         }
+
         if (clickedElement.getAttribute('href') == '#products') {
           sectionContactUs.classList.add('inactive');
           sectionProducts.classList.remove('inactive');
