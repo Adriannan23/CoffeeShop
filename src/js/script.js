@@ -1,15 +1,18 @@
 import { settings, select } from './settings.js';
 
 
-const app = {
+class App {
 
-  elo: function (htmlString) {
+  constructor() {
+  }
+
+  elo(htmlString) {
     let div = document.createElement('div');
     div.innerHTML = htmlString.trim();
     return div.firstChild;
-  },
+  }
 
-  connectWithDataBase: function () {
+  connectWithDataBase() {
 
     const url = settings.db.url + '/' + settings.db.products;
 
@@ -32,9 +35,9 @@ const app = {
           }
         }
       });
-  },
+  }
 
-  hideTabs: function () {
+  hideTabs() {
 
     const sectionProducts = document.querySelector('.section-products');
 
@@ -75,9 +78,10 @@ const app = {
         }
       });
     }
-  },
-};
+  }
+}
 
+const app = new App();
 app.connectWithDataBase();
 app.hideTabs();
 
