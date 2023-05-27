@@ -400,7 +400,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-margin-top: 45px;
+  margin-top: 45px;
 }
 
 .contact-form label {
@@ -417,7 +417,7 @@ margin-top: 45px;
 }
 
 .contact-form button {
-  margin-top:15px;
+  margin-top: 15px;
   padding: 12px 30px;
   background-color: $color-main;
   color: white;
@@ -440,5 +440,137 @@ margin-top: 45px;
   text-align: center;
   font-family: $font-main;
   font-size: 12px;
-  padding:15px;
+  padding: 15px;
 }
+
+
+@media (max-width: 767px) {
+  .container-header{
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .logo{
+    position: absolute;
+top: 70px;
+
+  }
+
+
+  .products-wrapper {
+    flex-direction: column;
+  }
+
+  .main-nav {
+
+    z-index: 2;
+
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    transform: translate(-100%, -40%);
+
+
+    a{
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 20px;
+    }
+  }
+
+
+
+  .products-wrapper-description-left {
+    order: 2;
+    position:absolute;
+    top: -290px;
+    right: 60px;
+    flex-wrap: wrap;
+  }
+
+  .img-wrapper-left {
+    order: 1;
+    margin-bottom: 300px;
+    position:relative;
+    img{
+      height: 270px;
+      width: 370px;
+    }
+  }
+
+  .products-wrapper-description-right {
+    order: 2;
+    top: -290px;
+    right: 30px;
+    flex-wrap: wrap;
+  }
+
+  .img-wrapper-right {
+    order: 1;
+    margin-bottom: 300px;
+    img{
+      height: 270px;
+      width: 370px;
+    }
+  }
+
+  .header-page-description {
+    // position: relative;
+    z-index: 1;
+
+    .header_description_top{
+      position: absolute;
+      font-size: 35px !important;
+      left: 370px;
+      top: 200px;
+      letter-spacing: 2px;
+    }
+
+    .header_description_bottom{
+      position: absolute;
+      font-size: 30px !important;
+      top: 250px;
+letter-spacing: 2px;
+left: 315px;
+    }
+  }
+
+  .contact-form h2::after {
+
+    width: 200px;
+
+  }
+  .about-us-paragraphs-wrapper{
+    max-width: 350px;
+  }
+
+
+  .about-us-paragraphs-wrapper p {
+    display: flex;
+   flex-wrap: wrap;
+    font-size: 16px;
+    position: relative;
+    left: -30px;
+  }
+
+  .header-wrapper::after{
+
+    width: 350px;
+
+  }
+
+  .about-us-paragraph-join-us{
+    position: absolute;
+    left: 200px;
+  }
+
+  .paragraph-desc-wrapper{
+    max-width: 250px;
+  }
+
+}
+
