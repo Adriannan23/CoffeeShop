@@ -434,8 +434,8 @@ header {
     position: relative;
   }
   .img-wrapper-left img {
-    height: 270px;
-    width: 370px;
+    height: 250px;
+    width: 350px;
   }
   .products-wrapper-description-right {
     order: 2;
@@ -448,8 +448,8 @@ header {
     margin-bottom: 300px;
   }
   .img-wrapper-right img {
-    height: 270px;
-    width: 370px;
+    height: 250px;
+    width: 350px;
   }
   .header-page-description {
     z-index: 1;
@@ -489,7 +489,7 @@ header {
     left: 200px;
   }
   .paragraph-desc-wrapper {
-    max-width: 250px;
+    max-width: 230px;
   }
 }
 
